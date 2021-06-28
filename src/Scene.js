@@ -110,7 +110,8 @@ const Scene = () => {
         metalness: 0.8,
         roughness: 0.2,
       });
-      model.children[0].material = groundMaterial;
+      ground.material = groundMaterial;
+      ground.material.needsUpdate = true;
       const blue_light = model.children[4];
       blue_light.material.color.setHex("0x00bcbd");
       const yelow_light = model.children[3];
